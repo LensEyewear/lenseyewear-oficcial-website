@@ -1,0 +1,78 @@
+.PaymentPending {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PaymentPending .textPending {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 10px;
+}
+
+.PaymentPending .textPending svg {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 46px;
+    color: var(--Edit);
+}
+.PaymentPending .textPending h2 {
+    text-align: center;
+    margin: 0 20px;
+    color: var(--Primary);
+    font-weight: 600;
+}
+.PaymentPending .textPending p {
+    text-align: center;
+    margin:20px;
+    color: var(--Paragraph);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.PaymentPending .resumePaymentPending .buttonsPaymentPending {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    padding: 30px;
+}
+
+.PaymentPending .resumePaymentPending .buttonsPaymentPending .btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border: 1px solid var(--Paragraph);
+}
+.PaymentPending .resumePaymentPending .buttonsPaymentPending .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--Aproved);
+    color: var(--White);
+    border: none;
+}
+
+
+@media (max-width: 1120px) {
+.PaymentPending .resumePaymentPending {
+    width: 100%;
+}
+
+}
+

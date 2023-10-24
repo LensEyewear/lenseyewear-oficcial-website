@@ -1,0 +1,78 @@
+.PaymentConfirmed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PaymentConfirmed .textConfirmed {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px 10px;
+}
+
+.PaymentConfirmed .textConfirmed svg {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 46px;
+    color: var(--Aproved);
+}
+.PaymentConfirmed .textConfirmed h2 {
+    text-align: center;
+    margin: 0 20px;
+    color: var(--Primary);
+    font-weight: 600;
+}
+.PaymentConfirmed .textConfirmed p {
+    text-align: center;
+    margin:20px;
+    color: var(--Paragraph);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.PaymentConfirmed .resumePaymentConfirmed .buttonsPaymentConfirmed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    padding: 30px;
+}
+
+.PaymentConfirmed .resumePaymentConfirmed .buttonsPaymentConfirmed .btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border: 1px solid var(--Paragraph);
+}
+.PaymentConfirmed .resumePaymentConfirmed .buttonsPaymentConfirmed .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--Aproved);
+    color: var(--White);
+    border: none;
+}
+
+
+@media (max-width: 1120px) {
+.PaymentConfirmed .resumePaymentConfirmed {
+    width: 100%;
+}
+
+}
+

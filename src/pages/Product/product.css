@@ -1,0 +1,277 @@
+.Product {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.Product .topInfos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding:20px;
+}
+.Product .topInfos h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: var(--Primary);
+}
+.Product .topInfos h5 svg {
+    margin: 0 7px;
+}
+
+
+.Product .InfosProduct {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding:20px;
+}
+.Product .InfosProduct .images {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 50%;
+}
+.Product .InfosProduct .images .listImages {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100px;
+
+}
+.Product .InfosProduct .images .listImages img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin: 3px;
+    border-radius: 6px;
+
+}
+.Product .InfosProduct .images .imageMain {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+}
+.Product .InfosProduct .images .imageMain img {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.Product .InfosProduct .dataProduct {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    padding: 0 20px;
+}
+
+.Product .InfosProduct .dataProduct h3 {
+    color: var(--Primary);
+}
+.Product .InfosProduct .dataProduct h4 {
+    color: var(--Paragraph);
+}
+.Product .InfosProduct .dataProduct h4 span {
+    color: var(--Primary);
+    font-weight: 700;
+}
+.Product .InfosProduct .dataProduct h5 {
+    color: var(--Paragraph);
+}
+.Product .InfosProduct .dataProduct h5 span {
+    color: var(--Primary);
+    font-weight: 700;
+}
+.Product .InfosProduct .dataProduct h6 {
+    color: var(--Paragraph);
+}
+.Product .InfosProduct .dataProduct h6 span {
+    color: var(--Primary);
+    font-weight: 700;
+}
+
+
+
+.Product .InfosProduct .dataProduct .color {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.Product .InfosProduct .dataProduct .color .listColor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px 0;
+}
+.Product .InfosProduct .dataProduct .color .listColor .colorUnic {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid var(--Gray);
+}
+
+.Product .InfosProduct .dataProduct .buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    width: 350px
+}
+
+.Product .InfosProduct .dataProduct .buttons .btn1 {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+flex-direction: row;
+ width: 350px;
+ height: 45px;
+ background-color: var(--Aproved);
+ color: var(--White);
+ border: 1px solid var(--Aproved);
+ margin: 5px 0;
+ border-radius: 10px;
+}
+
+.Product .InfosProduct .dataProduct .buttons .btn2 {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+flex-direction: row;
+ width: 350px;
+ height: 45px;
+ background-color: var(--White);
+ color: var(--Aproved);
+ border: 1px solid var(--Aproved);
+ margin: 5px 0;
+ border-radius: 10px;
+}
+
+
+.Product .InfosProduct .dataProduct .delivery  {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    width: 350px;
+    margin: 5px 0;
+}
+
+.Product .InfosProduct .dataProduct .delivery h6 {
+    margin: 5px 0;
+}
+
+.Product .InfosProduct .dataProduct .delivery .cep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: row;
+}
+
+.Product .InfosProduct .dataProduct .delivery .cep input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       flex-direction: row;
+        padding: 5px 10px;
+        background-color: transparent;
+        color: var(--Primary);
+        border: 1px solid var(--Paragraph);
+        margin: 5px;
+        border-radius: 6px;
+}  
+.Product .InfosProduct .dataProduct .delivery .cep button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       flex-direction: row;
+        padding: 5px 10px;
+        background-color: var(--Edit);
+        color: var(--White);
+        border: 1px solid var(--Edit);
+        margin: 5px;
+        border-radius: 6px;
+}  
+
+.Product .measures {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding:40px 20px;
+}
+.Product .measures .measuresInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    padding:10px;
+    border-right: 1px solid var(--Gray);
+}
+
+
+.Product .measures .measuresInfo h3 {
+    font-weight: 700;
+    color: var(--Primary);
+}
+
+.Product .measures .measuresInfo .textInfoMeasures {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 400px;
+    padding:5px;
+    border-bottom: 1px solid var(--Gray);
+    margin: 10px;
+}
+
+.Product .measures .measuresInfo .textInfoMeasures h5 {
+    font-weight: 700;
+}
+.Product .measures .measuresInfo .textInfoMeasures h5 span {
+    font-weight: 400;
+}
+
+
+.Product .measures .measuresImage {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 50%;
+    padding:10px;
+}
+
+.Product .measures .measuresImage h3 {
+    font-weight: 700;
+    color: var(--Primary);
+}
+
+.Product .measures .measuresImage img {
+    width: 400px;
+}

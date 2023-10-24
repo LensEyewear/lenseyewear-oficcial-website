@@ -1,0 +1,197 @@
+﻿
+.each-slide-effect .imageTop {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 0;
+}
+
+.each-slide-effect .imageTop .image {
+  width: 100%;
+  object-fit:cover ;
+  background: var(--Primary);
+}
+.each-slide-effect .imageTop .image img {
+  width: 100%;
+  object-fit:cover ;
+}
+
+.each-slide-effect .imageTop .blockSlider {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:center;
+  border-radius: 6px;
+  margin: 70px;
+  padding: 20px;
+  z-index: 0;
+  position: absolute;
+  color: var(--White);
+}
+.each-slide-effect .imageTop .blockSlider button {
+ border: none;
+ border-radius: 20px;
+ background-color: var(--Primary);
+ color: var(--White);
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ padding: 10px 20px;
+ margin: 20px 0;
+}
+.each-slide-effect .imageTop .blockSlider .featured {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Primary);
+  border-radius: 20px;
+  margin-top: -35px;
+  padding: 10px 40px;
+}
+
+.each-slide-effect .imageTop .blockSlider .featured p {
+  color: var(--White);
+  font-weight: 700;
+}
+
+.each-slide-effect .imageTop .blockSlider h1 {
+  color: var(--White);
+  font-weight: 900;
+  margin: 0px 10px 5px 10px;
+}
+.each-slide-effect .imageTop .blockSlider h3 {
+  color: var(--White);
+  font-weight: 700;
+  margin: 10px 10px 5px 10px;
+}
+.each-slide-effect .imageTop .blockSlider a {
+  text-decoration: none;
+}
+.each-slide-effect .imageTop .blockSlider h4 {
+  color: var(--White);
+  margin: 0 10px;
+}
+.each-slide-effect .imageTop .blockSlider h5 {
+  color: var(--White);
+  margin: 0 10px;
+}
+.each-slide-effect .imageTop .blockSlider .icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 5px 3px;
+}
+
+.each-slide-effect .imageTop .blockSlider .icons .iconUnic {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  margin: 2px;
+  color: var(--White);
+}
+.each-slide-effect .imageTop .blockSlider .icons .iconUnic  svg {
+  font-size: 18px;
+  margin-right: 10px;
+  color: var(--Primary);
+}
+
+.each-slide-effect .imageTop .blockSlider .icons .iconUnic .simbol {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.each-slide-effect .imageTop .blockSlider .icons .iconUnic .simbol p {
+  color: var(--White);
+  font-weight: 600;
+}
+
+.each-slide-effect .imageTop .blockSlider .pricing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: flex-start;
+}
+
+.each-slide-effect .imageTop .blockSlider .pricing h5 {
+  color: var(--White);
+  font-weight: 800;
+  margin: 5px 10px;
+}
+.each-slide-effect .imageTop .blockSlider .pricing span {
+  font-weight: 500;
+}
+.each-slide-effect .imageTop .blockSlider .pricing h2 {
+  color: var(--White);
+  font-weight: 400;
+  margin: 0 10px;
+  font-size: 20px;
+}
+.each-slide-effect .imageTop .blockSlider .pricing h2 span {
+  font-weight: 800;
+}
+
+
+@media (max-width: 650px) {
+
+  .each-slide-effect .imageTop {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+/* You must set a specified height */
+  }
+  .each-slide-effect .imageTop .blockSlider {
+    width: 500px;
+      margin: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+  }
+@media (max-width: 530px) {
+  .each-slide-effect .imageTop .blockSlider {
+    width: 450px;
+  }
+  @media (max-width: 500px) {
+
+    .each-slide-effect .imageTop .blockSlider {
+      width: 400px;
+    }
+      .each-slide-effect .imageTop .blockSlider .icons {
+          width: 100%;
+          flex-wrap: wrap;
+      }
+      .each-slide-effect .imageTop .blockSlider .icons .iconUnic {
+          width: 80px;
+      }
+
+      @media (max-width: 430px) {
+        .each-slide-effect .imageTop .blockSlider {
+          width: 350px;
+        }
+
+        @media (max-width: 390px) {
+          .each-slide-effect .imageTop .blockSlider {
+            width: 320px;
+          }
+          }
+        }
+  }
+}
+}

@@ -1,0 +1,64 @@
+.Products {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.Products .productsList {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1100px;
+}
+.Products .productsList .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px;
+}
+
+.Products .productsList .filter button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: row;
+    padding: 10px 20px;
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border: 1px solid var(--Paragraph);
+    margin: 5px 0;
+    border-radius: 10px;
+}
+.Products .productsList .filter select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   flex-direction: row;
+   padding: 10px 20px;
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border: 1px solid var(--Paragraph);
+    margin: 5px 0;
+    border-radius: 10px;
+}
+.Products .productsList .listProducts {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+
+@media(max-width: 1120px) {
+    .Products .productsList {
+        width: 100%;
+        padding: 20px;
+}
+}

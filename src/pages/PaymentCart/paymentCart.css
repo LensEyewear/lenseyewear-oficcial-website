@@ -1,0 +1,156 @@
+.PaymentCart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PaymentCart h3 {
+    text-align: center;
+    margin: 40px 20px;
+    color: var(--Primary);
+    font-weight: 600;
+}
+
+.PaymentCart .resumePaymentCart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1100px;
+    margin: 20px 0;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .TitleList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .TitleList .itensTitleOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 40%;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .TitleList .itensTitleOne h4 {
+    font-weight: 700;
+    color: var(--Paragraph);
+}
+
+
+.PaymentCart .resumePaymentCart .ListProducts  .TitleList .itensTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 15%;
+    margin: 5px;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .TitleList .itensTitle h4 {
+    font-weight: 700;
+    color: var(--Paragraph);
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList .ItensPaymentCartListOne {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 40%;
+    margin: 5px;
+}
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList .ItensPaymentCartListUnic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 15%;
+    margin: 5px;
+}
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList .ItensPaymentCartListOne img {
+    width: 50px;
+    margin: 5px;
+}
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList .ItensPaymentCartListUnic h5 {
+    font-weight: 460;
+    color: var(--Paragraph);
+    margin: 5px;
+}
+
+.PaymentCart .resumePaymentCart .ListProducts  .ItensPaymentCartList .ItensPaymentCartListUnic button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    border: none;
+    margin: 5px;
+}
+.PaymentCart .resumePaymentCart .buttonsPaymentCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 0;
+    padding: 30px;
+}
+
+.PaymentCart .resumePaymentCart .buttonsPaymentCart .btn1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--White);
+    color: var(--Paragraph);
+    border: 1px solid var(--Paragraph);
+}
+.PaymentCart .resumePaymentCart .buttonsPaymentCart .btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 300px;
+    height: 40px;
+    background-color: var(--Aproved);
+    color: var(--White);
+    border: none;
+}
+
+
+@media (max-width: 1120px) {
+.PaymentCart .resumePaymentCart {
+    width: 100%;
+}
+
+}
+

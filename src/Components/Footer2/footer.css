@@ -1,0 +1,149 @@
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--BorderInput);
+    padding-top: 50px;
+}
+
+.Footer .image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 0;
+}
+.Footer .image a img {
+  height: 40px;
+}
+
+
+.Footer .image .icons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
+ }
+ .Footer .image .icons .unicIconMenu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding:10px;
+  background-color: var(--Primary);
+  color: var(--White);
+  border-radius: 25px;
+  margin: 5px 15px;
+  border: none;
+  font-size: 20px;
+  text-decoration: none;
+ }
+
+ .Footer .image .icons .unicIconMenu:hover {
+background-color: var(--PrimaryDisabled);
+color: var(--White);
+}
+
+
+.Footer .top{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 90%;
+    padding: 10x;
+}
+
+.Footer .top .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 33%;
+    padding: 10px;
+}
+
+.Footer .top .menu h4 {
+  color: var(--Primary);
+  font-weight: 700;
+  margin: 5px 0;
+}
+.Footer .top .menu a {
+  text-decoration: none;
+  color: var(--Gray);
+  font-weight: 400;
+  margin: 5px 0;
+  font-size: 14px;
+}
+.Footer .top .menu a:hover {
+  color: var(--PrimaryDisabled);
+}
+
+
+
+   .Footer .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+   .Footer .content .asside{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+}
+
+.Footer .content .asside h3 {
+  font-weight: 700;
+  color: var(--Primary);
+}
+
+
+   .Footer .content .address{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 20px;
+    color: var(--Gray);
+}
+
+.Footer .content .address span {
+  font-weight: 700;
+}
+
+
+.Footer .copy{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--Primary);
+  color: var(--White);
+  padding: 20px;
+ }
+
+
+   @media(max-width:600px) {
+    .Footer .top .image a img {
+      height: 30px;
+    }
+
+    .Footer .copy{
+    text-align: center;
+     }
+  
+   }

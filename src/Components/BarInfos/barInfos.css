@@ -1,0 +1,27 @@
+.BarInfos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    background-color: #F5F5F5;
+    flex-wrap: wrap;
+}
+.BarInfos .infoBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+}
+
+.BarInfos .infoBar svg {
+    font-size: 36px;
+    color: var(--Primary);
+    margin: 10px;
+}
+.BarInfos .infoBar h4 {
+    color: var(--Primary);
+}
