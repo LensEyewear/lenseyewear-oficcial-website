@@ -10,9 +10,9 @@ const Nav = styled.nav`
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  z-index: 10;
+  position: fixed;
   top: 0;
-  position: absolute;
+  z-index: 97;
   background-color: rgba(255, 255, 255);
   backdrop-filter: blur(4px);
   font-size: 14px;
