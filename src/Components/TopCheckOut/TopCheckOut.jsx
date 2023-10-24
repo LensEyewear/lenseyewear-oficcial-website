@@ -1,5 +1,5 @@
 import "./topCheckOut.css"
-import LogoImg from '../../assets/images/Logo-color.png'
+import LogoImg from '../../assets/images/logo-color.png'
 
 
 export function TopCheckOut({Check}) {

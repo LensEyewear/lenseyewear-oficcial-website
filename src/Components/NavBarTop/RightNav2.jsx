@@ -7,7 +7,7 @@ import top03 from '../../assets/images/top-03.png'
 import top04 from '../../assets/images/top-04.png'
 import { IoBagOutline,IoCartOutline, IoPersonOutline, IoHeartOutline, IoBagAddOutline,IoEyeOutline,
         IoSearchOutline, IoLogoInstagram, IoLogoFacebook, IoLogoLinkedin, IoGlasses, IoGlassesOutline } from 'react-icons/io5';
-        import LogoImg from '../../assets/images/Logo-color.png'
+        import LogoImg from '../../assets/images/logo-color.png'
 
 const UlAdm = styled.ul`
   list-style: none;
