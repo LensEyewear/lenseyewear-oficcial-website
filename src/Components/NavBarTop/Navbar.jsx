@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import Burger from './Burger';
-import LogoImg from '../../assets/images/Logo-color.png'
+import LogoImg from '../../assets/images/logo-color.png'
 import { AuthContext } from '../../contexts/Auth';
 
 
