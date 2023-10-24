@@ -23,9 +23,10 @@ function Router () {
             <Route path="/" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/cadastrar" element={<SignUp />}/>
-            <Route path="/produtos/:tipo" element={<Product />}/>
+            <Route path="/oculos/:nome" element={<Product />}/>
             <Route path="/produtos/:tipo/:sexo" element={<Products />}/>
-            <Route path="/produtos/:oculos-de-grau" element={<Products />}/>
+            <Route path="/produtos/:tipo" element={<Products />}/>
+            <Route path="/acessorios" element={<Products />}/>
             <Route path="/checkout/carrinho" element={<Cart />}/>
             <Route path="/checkout/pagamento" element={<PaymentCart />}/>
             <Route path="/checkout/confirmado" element={<PaymentConfirmed />}/>

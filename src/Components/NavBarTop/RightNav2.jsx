@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
+import {Tooltip as ReactTooltip} from 'react-tooltip';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import top01 from '../../assets/images/top-01.png'
@@ -456,10 +457,25 @@ const RightNav2 = ({ open }) => {
       </div>
 
       <div className="actions">
-          <a href="http://"> <IoPersonOutline /> </a>
-          <a href="http://"> <IoHeartOutline /> </a>
-          <a href="http://"> <IoBagOutline /> </a>
-          <a href="http://"> <IoCartOutline /> </a>
+          <a href="/entrar" data-tooltip-id="my-tooltip" data-tooltip-content="Entrar ou Cadastrar"> <IoPersonOutline /> </a>
+          <ReactTooltip id="my-tooltip" place="bottom" type="dark" effect="solid">
+                     <span>Entrar</span>
+                </ReactTooltip>
+
+          <a href="http://" data-tooltip-id="Favoritos" data-tooltip-content="Favoritos"> <IoHeartOutline /> </a>
+          <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
+                     <span>Favoritos</span>
+                </ReactTooltip>
+
+          <a href="http://"  data-tooltip-id="Meus pedidos" data-tooltip-content="Meus pedidos"> <IoBagOutline /> </a>
+          <ReactTooltip id='Meus pedidos' place="bottom" type="dark" effect="solid">
+                     <span>Meus pedidos</span>
+                </ReactTooltip>
+
+          <a href="/checkout/carrinho"  data-tooltip-id="Carrinho" data-tooltip-content="Carrinho"> <IoCartOutline /> </a>
+          <ReactTooltip id='Carrinho' place="bottom" type="dark" effect="solid">
+                     <span>Carrinho</span>
+                </ReactTooltip>
       </div>
 
       </div>
@@ -469,11 +485,11 @@ const RightNav2 = ({ open }) => {
         <div className="itensMenu">
             <div className="unicIten">
               <img src={top01} alt="Logo Sua Chave" />
-            <a href="/">ÓCULOS DE GRAU</a>
+            <a href="/produtos/oculos-de-grau">ÓCULOS DE GRAU</a>
               </div> 
             <div className="unicIten">
             <img src={top02} alt="Logo Sua Chave" />
-           <a href="/">ÓCULOS DE SOL</a>
+           <a href="/produtos/oculos-de-sol">ÓCULOS DE SOL</a>
               </div> 
             {/* <div className="unicIten">
             <img src={top03} alt="Logo Sua Chave" />
@@ -481,7 +497,7 @@ const RightNav2 = ({ open }) => {
               </div>  */}
             <div className="unicIten">
             <img src={top04} alt="Logo Sua Chave" />
-             <a href="/">ACESSÓRIOS</a>
+             <a href="/acessorios">ACESSÓRIOS</a>
               </div> 
         </div>       
       </div>

@@ -11,8 +11,9 @@ export function SignIn() {
 
             <div className="sections">
                 <div className="sectionSignIn">
+                <a href="/">
                 <img src={logo} alt="" />
-
+                </a>
                         <div className="form">
                         <h3>Entrar</h3>
                             <input type="text" placeholder="Nome"/>
@@ -25,7 +26,7 @@ export function SignIn() {
                                 <a href="Esqueci minha senha"></a>
                             </div>
                             <button>Entrar</button>
-                            <a href="#" className="Link">Cadastre-se</a>
+                            <a href="/cadastrar" className="Link">Cadastre-se</a>
                         </div>
 
                         <p>Lens Eweyear &copy; {date}</p>

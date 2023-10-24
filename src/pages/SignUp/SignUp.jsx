@@ -13,7 +13,9 @@ export function SignUp() {
             <div className="imageSignUp"></div>
             
                 <div className="sectionSignUp">
+                <a href="/">
                 <img src={logo} alt="" />
+                </a>
 
                         <div className="form">
                         <h3>Entrar</h3>
