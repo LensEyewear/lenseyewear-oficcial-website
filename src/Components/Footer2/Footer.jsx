@@ -1,5 +1,5 @@
 import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io5";
-import LogoImg from '../../assets/images/Logo-color.png'
+import LogoImg from '../../assets/images/logo-color.png'
 import "./footer.css"
 
 export function Footer() {
