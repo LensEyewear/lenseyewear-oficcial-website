@@ -19,7 +19,7 @@
 .SignUp .sections .sectionSignUp {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
     width: 50%;
     height: 100%;
@@ -45,6 +45,34 @@
     flex-direction: column;
     width: 400px;
     margin: 0 auto;
+}
+.SignUp .sections .sectionSignUp .buttonsSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 5px;
+}
+.SignUp .sections .sectionSignUp .buttonsSelect .btnSelect1 {
+    padding: 5px 20px;
+    border-radius: 0px;
+    width:100%;
+    color: var(--Primary);
+    background-color: var(--White);
+    border: none;
+    border-bottom: 2px solid var(--Primary);
+    margin: 0px;
+}
+.SignUp .sections .sectionSignUp .buttonsSelect .btnSelect2 {
+    padding: 5px 20px;
+    border-radius: 0px;
+    width:100%;
+    color: var(--Gray);
+    background-color: var(--White);
+    border: none;
+    border-bottom: 2px solid var(--Gray);
+    margin: 0px;
 }
 
 .SignUp .sections .sectionSignUp .form h3 {
@@ -95,6 +123,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.SignUp .sections .sectionSignUp .form .double {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+
+.SignUp .sections .sectionSignUp .form  .double input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 48%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 0;
+}
+
+.SignUp .sections .sectionSignUp .form .passwords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+}
+.SignUp .sections .sectionSignUp .form .passwords .pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+
+.SignUp .sections .sectionSignUp .form .passwords .pass input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 5px 5px 0;
+}
+
+.SignUp .sections .sectionSignUp .form .passwords .pass button {
+    padding: 10px;
+    border-radius: 6px;
+    width: 50px;
+    color: var(--Primary);
+    background-color: var(--White);
+    border: 1px solid var(--Primary);
+    margin: 5px 0 5px 5px;
 }
 
 .SignUp .sections .imageSignUp {

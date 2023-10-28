@@ -16,7 +16,7 @@ export function SignIn() {
                 </a>
                         <div className="form">
                         <h3>Entrar</h3>
-                            <input type="text" placeholder="Nome"/>
+                            <input type="text" placeholder="E-mail"/>
                             <input type="password" placeholder="Senha"/>
                             <div className="linkSignIn">
                                 <a href="#">Esqueci a senha</a>
