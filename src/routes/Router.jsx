@@ -9,6 +9,8 @@ import { SignIn } from '../pages/SignIn/SignIn';
 import { PaymentPending } from '../pages/PaymentPending/PaymentPending';
 import { PaymentRefused } from '../pages/PaymentRefused/PaymentRefused';
 import { SignUp } from '../pages/SignUp/SignUp';
+import { AccountCreateConfirmed } from '../pages/AccountCreateConfirmed/AccountCreateConfirmed';
+import { MyAccount } from '../pages/MyAccount/MyAccount';
 
 function Router () {
         const Local = localStorage.getItem("lenseyewear");
@@ -32,6 +34,8 @@ function Router () {
             <Route path="/checkout/confirmado" element={<PaymentConfirmed />}/>
             <Route path="/checkout/pendente" element={<PaymentPending />}/>
             <Route path="/checkout/recusado" element={<PaymentRefused />}/>
+            <Route path="/conta-criada" element={<AccountCreateConfirmed />}/>
+            <Route path="/minha-conta" element={<MyAccount />}/>
             {/* <Route path="/"
                     element={ <PrivateRoute> <Home /></PrivateRoute>} /> */}
             </Routes>

@@ -1,0 +1,46 @@
+.MyAccount {
+    width: 100%;
+    padding-top: 245px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.MyAccount .menuAccount {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.MyAccount .menuAccount button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--Primary);
+    color: var(--White);
+    margin: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row; 
+}
+
+.MyAccount .menuAccount button:hover {
+    background-color: var(--PrimaryDisabled); 
+}
+
+.MyAccount .menuAccount button svg {
+    margin-right: 3px;
+    font-size: 18px;
+}
+
+@media (max-width: 900px) {
+    .MyAccount {
+        padding-top: 60px;
+    }
+}
