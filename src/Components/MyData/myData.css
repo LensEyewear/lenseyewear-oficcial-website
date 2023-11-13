@@ -13,12 +13,67 @@
 }
 .MyData .MyDataList {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     width: 100%;
     margin: 20px auto;
     flex-wrap: wrap;
+}
+.MyData .MyDataList .userData {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+}
+
+.MyData .MyDataList .userData h4 span {
+    font-weight: 700;
+}
+.MyData .MyDataList .userData button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:70%;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px;
+}
+
+.MyData .MyDataList .password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+}
+.MyData .MyDataList .password input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:70%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 5px 5px 0;
+}
+.MyData .MyDataList .password button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:70%;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px;
 }
 
 @media (max-width: 1120px) {
@@ -28,5 +83,24 @@
         justify-content: center;
         flex-direction: column;
         width: 100%;
+        margin: 30px 10px;
     }
+    @media (max-width: 650px) {
+        .MyData .MyDataList {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .MyData .MyDataList .password {
+            width: 90%;
+        }
+        .MyData .MyDataList .userData {
+            width: 90%;
+        }
+}
 }
