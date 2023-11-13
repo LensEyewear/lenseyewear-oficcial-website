@@ -7,19 +7,31 @@ import { useParams } from "react-router-dom";
 import { Orders } from "../../Components/Orders/Orders";
 import { MyData } from "../../Components/MyData/MyData";
 import { CustomerSupport } from "../../Components/CustomerSupport/CustomerSupport";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/Auth";
 
 export function MyAccount() {
     const {data} = useParams();
+
+    const {logout} = useContext(AuthContext);
+
+    function handleLogOut() {
+        logout()
+    }
+
+    function handleRedirect(data) {
+        window.open( `/minha-conta/${data}`, "_self")
+    }
     return (
         <div className="MyAccount">
             <Navbar/>
 
             <div className="menuAccount">
-                <button> <IoCubeOutline /> Meus Pedidos</button>
-                <button> <IoPersonOutline /> Meus Dados</button>
-                <button> <IoHeartOutline /> Favoritos</button>
-                <button> <IoChatboxOutline /> Atendimento</button>
-                <button className="btn2"> <IoCloseCircleSharp/> Sair</button>
+                <button onClick={() => handleRedirect("pedidos")}> <IoCubeOutline /> Meus Pedidos</button>
+                <button onClick={() => handleRedirect("meus-dados")}> <IoPersonOutline /> Meus Dados</button>
+                <button onClick={() => handleRedirect("favoritos")}> <IoHeartOutline /> Favoritos</button>
+                <button onClick={() => handleRedirect("atendimento")}> <IoChatboxOutline /> Atendimento</button>
+                <button className="btn2" onClick={handleLogOut}> <IoCloseCircleSharp/> Sair</button>
             </div>
 
             <div className="boxAccount">

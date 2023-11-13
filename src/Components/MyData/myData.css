@@ -11,7 +11,7 @@
     font-weight: 700;
     color: var(--Primary);
 }
-.MyData .favotitesList {
+.MyData .MyDataList {
     display: flex;
     align-items: center;
     justify-content: center;

@@ -34,8 +34,11 @@ function AuthProvider({children}) {
                 return
             }
 
+            toast.success("Entrando...");
             localStorage.setItem("lenseyewear", JSON.stringify(result.data));
-            window.open("/minha-conta/pedidos", "_self")
+            setTimeout(() => {
+                window.open("/minha-conta/pedidos", "_self");
+              }, "5000")
             
         }).catch(error => {
             
@@ -44,11 +47,17 @@ function AuthProvider({children}) {
         }) 
 } 
 
+async function logout() {
+    localStorage.removeItem("lenseyewear");
+    window.location.reload(false);
+}
+
 
     return(
         <AuthContext.Provider value={{
             loginSession,
             createAccount,
+            logout
         }}>
             {children}
         </AuthContext.Provider>

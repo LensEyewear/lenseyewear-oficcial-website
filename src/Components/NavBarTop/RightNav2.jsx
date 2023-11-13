@@ -471,17 +471,17 @@ const RightNav2 = ({ open }) => {
    </div>
     :
     <div className="actions">
-    <a href="/minha-conta" data-tooltip-id="my-tooltip" data-tooltip-content="Minha conta"> <IoPersonOutline /> </a>
+    <a href="/minha-conta/meus-dados" data-tooltip-id="my-tooltip" data-tooltip-content="Minha conta"> <IoPersonOutline /> </a>
     <ReactTooltip id="my-tooltip" place="bottom" type="dark" effect="solid">
                <span>Entrar</span>
           </ReactTooltip>
 
-    <a href="http://" data-tooltip-id="Favoritos" data-tooltip-content="Favoritos"> <IoHeartOutline /> </a>
+    <a href="/minha-conta/favoritos" data-tooltip-id="Favoritos" data-tooltip-content="Favoritos"> <IoHeartOutline /> </a>
     <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
                <span>Favoritos</span>
           </ReactTooltip>
 
-    <a href="http://"  data-tooltip-id="Meus pedidos" data-tooltip-content="Meus pedidos"> <IoBagOutline /> </a>
+    <a href="/minha-conta/pedidos"  data-tooltip-id="Meus pedidos" data-tooltip-content="Meus pedidos"> <IoBagOutline /> </a>
     <ReactTooltip id='Meus pedidos' place="bottom" type="dark" effect="solid">
                <span>Meus pedidos</span>
           </ReactTooltip>
