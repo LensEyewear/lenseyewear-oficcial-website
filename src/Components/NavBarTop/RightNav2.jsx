@@ -418,7 +418,8 @@ li a:hover{
 
 
 const RightNav2 = ({ open }) => {
-
+  const Local = localStorage.getItem("lenseyewear");
+  const user = JSON.parse(Local);
 
     function handleContact() {
       window.open("https://wa.me/+5521984129435")
@@ -456,27 +457,43 @@ const RightNav2 = ({ open }) => {
         <button><IoSearchOutline/></button>
       </div>
 
-      <div className="actions">
-          <a href="/entrar" data-tooltip-id="my-tooltip" data-tooltip-content="Entrar ou Cadastrar"> <IoPersonOutline /> </a>
-          <ReactTooltip id="my-tooltip" place="bottom" type="dark" effect="solid">
-                     <span>Entrar</span>
-                </ReactTooltip>
+      {user === null ?
+       <div className="actions">
+       <a href="/entrar" data-tooltip-id="my-tooltip" data-tooltip-content="Entrar ou Cadastrar"> <IoPersonOutline /> </a>
+       <ReactTooltip id="my-tooltip" place="bottom" type="dark" effect="solid">
+                  <span>Entrar</span>
+             </ReactTooltip>
 
-          <a href="http://" data-tooltip-id="Favoritos" data-tooltip-content="Favoritos"> <IoHeartOutline /> </a>
-          <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
-                     <span>Favoritos</span>
-                </ReactTooltip>
+       <a href="/checkout/carrinho"  data-tooltip-id="Carrinho" data-tooltip-content="Carrinho"> <IoCartOutline /> </a>
+       <ReactTooltip id='Carrinho' place="bottom" type="dark" effect="solid">
+                  <span>Carrinho</span>
+             </ReactTooltip>
+   </div>
+    :
+    <div className="actions">
+    <a href="/minha-conta" data-tooltip-id="my-tooltip" data-tooltip-content="Minha conta"> <IoPersonOutline /> </a>
+    <ReactTooltip id="my-tooltip" place="bottom" type="dark" effect="solid">
+               <span>Entrar</span>
+          </ReactTooltip>
 
-          <a href="http://"  data-tooltip-id="Meus pedidos" data-tooltip-content="Meus pedidos"> <IoBagOutline /> </a>
-          <ReactTooltip id='Meus pedidos' place="bottom" type="dark" effect="solid">
-                     <span>Meus pedidos</span>
-                </ReactTooltip>
+    <a href="http://" data-tooltip-id="Favoritos" data-tooltip-content="Favoritos"> <IoHeartOutline /> </a>
+    <ReactTooltip id='Favoritos' place="bottom" type="dark" effect="solid">
+               <span>Favoritos</span>
+          </ReactTooltip>
 
-          <a href="/checkout/carrinho"  data-tooltip-id="Carrinho" data-tooltip-content="Carrinho"> <IoCartOutline /> </a>
-          <ReactTooltip id='Carrinho' place="bottom" type="dark" effect="solid">
-                     <span>Carrinho</span>
-                </ReactTooltip>
-      </div>
+    <a href="http://"  data-tooltip-id="Meus pedidos" data-tooltip-content="Meus pedidos"> <IoBagOutline /> </a>
+    <ReactTooltip id='Meus pedidos' place="bottom" type="dark" effect="solid">
+               <span>Meus pedidos</span>
+          </ReactTooltip>
+
+    <a href="/checkout/carrinho"  data-tooltip-id="Carrinho" data-tooltip-content="Carrinho"> <IoCartOutline /> </a>
+    <ReactTooltip id='Carrinho' place="bottom" type="dark" effect="solid">
+               <span>Carrinho</span>
+          </ReactTooltip>
+</div>
+    }
+
+     
 
       </div>
 

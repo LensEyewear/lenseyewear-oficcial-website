@@ -1,0 +1,32 @@
+.CustomerSupport {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1100px;
+    margin: 20px auto;
+}
+
+.CustomerSupport h3 {
+    font-weight: 700;
+    color: var(--Primary);
+}
+.CustomerSupport .CustomerSupportList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1120px) {
+    .CustomerSupport {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}

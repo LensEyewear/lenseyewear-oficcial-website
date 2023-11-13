@@ -35,7 +35,7 @@ function Router () {
             <Route path="/checkout/pendente" element={<PaymentPending />}/>
             <Route path="/checkout/recusado" element={<PaymentRefused />}/>
             <Route path="/conta-criada" element={<AccountCreateConfirmed />}/>
-            <Route path="/minha-conta" element={<MyAccount />}/>
+            <Route path="/minha-conta/:data" element={<MyAccount />}/>
             {/* <Route path="/"
                     element={ <PrivateRoute> <Home /></PrivateRoute>} /> */}
             </Routes>

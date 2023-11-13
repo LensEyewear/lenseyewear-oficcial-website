@@ -1374,6 +1374,11 @@
   dependencies:
     "@babel/types" "^7.20.7"
 
+"@types/intl@^1.2.0":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@types/intl/-/intl-1.2.2.tgz#e39cd70968ad14b12cede5db14e558df24b33272"
+  integrity sha512-A4g5UEAA9c56JWKhc4LSJ9vzDMztjxVXDAXtVK4EbS3hW1V7Sz05VfcTgDQIvkOYJp1NqH222eg62P72HwltfQ==
+
 "@types/prop-types@*":
   version "15.7.7"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.7.tgz#f9361f7b87fd5d8188b2c998db0a1f47e9fb391a"
@@ -3008,6 +3013,13 @@ regjsparser@^0.9.1:
   integrity sha512-dQUtn90WanSNl+7mQKcXAgZxvUe7Z0SqXlgzv0za4LwiUhyzBC58yQO3liFoUgu8GiJVInAhJjkj1N0EtQ5nkQ==
   dependencies:
     jsesc "~0.5.0"
+
+remask@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/remask/-/remask-1.2.2.tgz#92f64bbd02923595a7a56748000a4bbd4ac694d6"
+  integrity sha512-zUNAiG1mYewmktEKpkvcmpDeP+04CzlWtoim7C9q/dnk7tgqtHoG9GIHjCH3I9fff7O41BLqOjRuX07s/hzF7w==
+  dependencies:
+    "@types/intl" "^1.2.0"
 
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"

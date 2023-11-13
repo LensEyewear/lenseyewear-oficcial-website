@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: var(--BorderInput);
+    background-color: #FCFCFC;
     padding-top: 50px;
 }
 
@@ -93,7 +93,7 @@ color: var(--White);
     justify-content: flex-start;
     width: 100%;
     padding: 20px;
-    background-color: #F5F5F5;
+    background-color: #F9F9F9;
 }
    .Footer .content .asside{
     display: flex;

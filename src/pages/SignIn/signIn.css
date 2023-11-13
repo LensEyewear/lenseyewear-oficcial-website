@@ -97,6 +97,41 @@
     justify-content: center;
 }
 
+
+.SignIn .sections .sectionSignIn .form .passwords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+}
+.SignIn .sections .sectionSignIn .form .passwords .pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+
+.SignIn .sections .sectionSignIn .form .passwords .pass input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 5px 5px 0;
+}
+
+.SignIn .sections .sectionSignIn .form .passwords .pass button {
+    padding: 10px;
+    border-radius: 6px;
+    width: 50px;
+    color: var(--Primary);
+    background-color: var(--White);
+    border: 1px solid var(--Primary);
+    margin: 5px 0 5px 5px;
+}
+
 .SignIn .sections .imageSignIn {
     display: flex;
     align-items: center;

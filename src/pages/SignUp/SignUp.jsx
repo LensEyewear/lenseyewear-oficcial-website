@@ -4,12 +4,87 @@ import Navbar from "../../Components/NavBarTop/Navbar";
 import { TopSign } from "../../Components/TopSign/TopSign";
 import logo from "../../assets/images/logo-color.png";
 import { IoEyeOffOutline } from "react-icons/io5";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { toast } from 'react-toastify';
+import { mask as masker, unMask } from "remask";
+import { AuthContext } from "../../contexts/Auth";
+
 
 export function SignUp() {
     const date = new Date().getFullYear();
+    const {createAccount} = useContext(AuthContext);
 
-    const [typeAccount, setTypeAccount] = useState("Pessoa Jurídica");
+    const [typeAccount, setTypeAccount] = useState("Pessoa Física");
+    const [cpf_cnpj, setCpf_cnpj] = useState("");
+    const [name, setName] = useState("");
+    const [socialName, setSocialName] = useState("");
+    const [email, setEmail] = useState("");
+    const [whatsapp, setWhatsapp] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState("");
+
+    function ChangeMaskPhone(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+          "(99)99999-9999",
+          "(99)99999-999",
+        ]);
+    
+        setWhatsapp(maskedValue)
+      }
+    function ChangeMaskDocument(e) {
+        const originalValue = unMask(e.target.value);
+        const maskedValue = masker(originalValue, [
+          "999.999.999-99",
+          "99.999.999/9999-99",
+        ]);
+    
+        setCpf_cnpj(maskedValue)
+      }
+
+    function handleCreateAccount(e) {
+        e.preventDefault();
+        
+        if(name === "") {
+            toast.error(`Preencha ${typeAccount === "Pessoa Física"  ?  "o Nome" : "a Rasão Social" }`);
+            return
+        }
+        if(socialName === "") {
+            toast.error(`Preencha ${typeAccount === "Pessoa Física"  ?  "o Nome Social" : "o Nome Fantasia" }`);
+            return
+        }
+        if(cpf_cnpj === "") {
+            toast.error(`Preencha ${typeAccount === "Pessoa Física"  ?  "o CPF" : "o CNPJ" }`);
+            return
+        }
+        if(email === "") {
+            toast.error(`Preencha o Email`);
+            return
+        }
+        if(whatsapp === "") {
+            toast.error(`Preencha o Whatsapp`);
+            return
+        }
+       
+        if(password === "") {
+            toast.error(`Preencha a senha`);
+            return
+        }
+        if(password !== "" && passwordConfirm === "") {
+            toast.error(`Preencha a confirmação de senha`);
+            return
+        }
+       
+        if(password  !== passwordConfirm) {
+            toast.error(`Senhas não coincidem`);
+            return
+        }
+       
+        console.log({type: typeAccount, cpf_cnpj, name, socialName, email, whatsapp, password})
+        createAccount({type: typeAccount, cpf_cnpj, name, socialName, email, whatsapp, password})
+
+    } 
+
 
     function selectTypeAccount(data) {
         setTypeAccount(data);
@@ -32,42 +107,48 @@ export function SignUp() {
                             <button className={typeAccount == "Pessoa Jurídica" ? "btnSelect1" : "btnSelect2"} onClick={ () => selectTypeAccount("Pessoa Jurídica")}>Pessoa Jurídica</button>
                         </div>
                         {
-                            typeAccount == "Pessoa Física" ?
+                            typeAccount === "Pessoa Física" ?
                             <>
-                            <input type="text" placeholder="Nome Completo"/>
-                            <input type="text" placeholder="Nome Social"/>
+                            <input type="text" value={name} onChange={e => (setName(e.target.value))} placeholder="Nome Completo"/>
+                            <input type="text" value={socialName} onChange={e => (setSocialName(e.target.value))} placeholder="Nome Social"/>
                             </>
                             :
                             <>
-                            <input type="text" placeholder="Razão Social"/>
-                            <input type="text" placeholder="Nome Fantasia"/>
+                            <input type="text" value={name} onChange={e => (setName(e.target.value))}  placeholder="Razão Social"/>
+                            <input type="text" value={socialName} onChange={e => (setSocialName(e.target.value))} placeholder="Nome Fantasia"/>
                             </>
 
                         }
                             <div className="double">
                             {
-                            typeAccount == "Pessoa Física" ?
-                            <input type="text" placeholder="CPF"/>
+                            typeAccount === "Pessoa Física" ?
+                            <input type="text"value={cpf_cnpj} onChange={ChangeMaskDocument} placeholder="CPF"/>
                             :
-                            <input type="text" placeholder="CNPJ"/>
+                            <input type="text" value={cpf_cnpj} onChange={ChangeMaskDocument} placeholder="CNPJ"/>
                         }
 
-                            <input type="text" placeholder="Whatsapp"/>
+                            <input type="text" value={whatsapp} onChange={ChangeMaskPhone} placeholder="Whatsapp"/>
                             </div>
-                            <input type="text" placeholder="E-mail"/>
+                            <input type="text" value={email} onChange={e => (setEmail(e.target.value))} placeholder="E-mail"/>
                             <div className="passwords">
                                 <div className="pass">                                    
-                            <input type="password" placeholder="Senha"/>
+                            <input type="password" value={password} onChange={e => (setPassword(e.target.value))} placeholder="Senha"/>
                                   <button><IoEyeOffOutline /></button>  
                                 </div>
                                 <div className="pass">
-                            <input type="password" placeholder="Confirmação de Senha"/>
+                            <input type="password" value={passwordConfirm} onChange={e => (setPasswordConfirm(e.target.value))} placeholder="Confirmação de Senha"/>
                                 <button><IoEyeOffOutline /></button>  
                                 </div>
                             </div>
-  
-                            <button>Cadastrar</button>
-                            <a href="/entrar" className="Link">Fazer login</a>
+
+                            {
+                               password  !== passwordConfirm ?
+                                <p style={{color: 'red'}}>Senhas não combinam</p> :
+                                ""
+                            }
+
+                            <button onClick={handleCreateAccount}>Cadastrar</button>
+                            <a href="/entrar" className="Link">Entrar</a>
                         </div>
 
                         <p>Lens Eweyear &copy; {date}</p>
