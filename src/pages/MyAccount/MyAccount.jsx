@@ -5,6 +5,8 @@ import "./myAccount.css";
 import { Favorites } from "../../Components/Favorites/Favorites";
 import { useParams } from "react-router-dom";
 import { Orders } from "../../Components/Orders/Orders";
+import { MyData } from "../../Components/MyData/MyData";
+import { CustomerSupport } from "../../Components/CustomerSupport/CustomerSupport";
 
 export function MyAccount() {
     const {data} = useParams();
@@ -25,7 +27,11 @@ export function MyAccount() {
                 data === "favoritos" ?
                 <Favorites /> :
                 data === "pedidos" ?
-                <Orders />
+                <Orders /> :
+                data === "meus-dados" ?
+                <MyData />:
+                data === "atendimento" ?
+                <CustomerSupport />
                 : ""}
             </div>
             <Footer />

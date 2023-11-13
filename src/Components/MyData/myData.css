@@ -1,4 +1,4 @@
-.CustomerSupport {
+.MyData {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -7,11 +7,11 @@
     margin: 20px auto;
 }
 
-.CustomerSupport h3 {
+.MyData h3 {
     font-weight: 700;
     color: var(--Primary);
 }
-.CustomerSupport .CustomerSupportList {
+.MyData .favotitesList {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,21 +20,9 @@
     margin: 20px auto;
     flex-wrap: wrap;
 }
-.CustomerSupport .CustomerSupportList .inforSupport{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width:300px;
-    margin: 10px;
-    flex-wrap: wrap;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    padding: 10px;
-}
 
 @media (max-width: 1120px) {
-    .CustomerSupport {
+    .MyData {
         display: flex;
         align-items: center;
         justify-content: center;
