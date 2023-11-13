@@ -17,7 +17,7 @@ function Router () {
         const userLocal = JSON.parse(Local)
 
         function PrivateRoute({children} ) {
-                return userLocal !== null || userLocal?.type === "client" ? children : <Navigate to="/"/>
+                return userLocal !== null  ? children : <Navigate to="/"/>
             }
 
     return (
@@ -35,9 +35,9 @@ function Router () {
             <Route path="/checkout/pendente" element={<PaymentPending />}/>
             <Route path="/checkout/recusado" element={<PaymentRefused />}/>
             <Route path="/conta-criada" element={<AccountCreateConfirmed />}/>
-            <Route path="/minha-conta/:data" element={<MyAccount />}/>
-            {/* <Route path="/"
-                    element={ <PrivateRoute> <Home /></PrivateRoute>} /> */}
+            {/* <Route path="/minha-conta/:data" element={<MyAccount />}/> */}
+            <Route path="/minha-conta/:data"
+                    element={ <PrivateRoute> <MyAccount /></PrivateRoute>} />
             </Routes>
            
     )

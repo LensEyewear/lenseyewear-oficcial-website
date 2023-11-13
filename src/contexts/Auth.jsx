@@ -35,7 +35,7 @@ function AuthProvider({children}) {
             }
 
             localStorage.setItem("lenseyewear", JSON.stringify(result.data));
-            window.open("/conta-criada", "_self")
+            window.open("/minha-conta/pedidos", "_self")
             
         }).catch(error => {
             
