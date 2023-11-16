@@ -48,8 +48,8 @@ export function Footer() {
                 </div>
 
             <div className="address">
-                <h5><span>Razão Social:</span> Lens Eweyear - CNPJ: 00.000.000/0000-00</h5>
-                <h5><span>Endereço:</span> Rua Luis Pinto Fláquer, 365 - Centro - Santo André | CEP: 09010-090</h5>
+                <h5><span>Razão Social:</span> Lens Eweyear - CNPJ: 45.511.079/0001-53</h5>
+                <h5><span>Endereço:</span> Rua 28 de Março, N 118, Sacomã, SP | CEP: 04236-160</h5>
             </div>
             </div>
 

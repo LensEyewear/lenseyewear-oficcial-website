@@ -9,6 +9,7 @@ import { MyData } from "../../Components/MyData/MyData";
 import { CustomerSupport } from "../../Components/CustomerSupport/CustomerSupport";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
+import { MyDataEdit } from "../../Components/MyDataEdit/MyDataEdit";
 
 export function MyAccount() {
     const {data} = useParams();
@@ -42,6 +43,8 @@ export function MyAccount() {
                 <Orders /> :
                 data === "meus-dados" ?
                 <MyData />:
+                data === "editar-meus-dados" ?
+                <MyDataEdit />:
                 data === "atendimento" ?
                 <CustomerSupport />
                 : ""}

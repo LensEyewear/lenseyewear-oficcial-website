@@ -23,21 +23,21 @@ const UlAdm = styled.ul`
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    padding: 5px 60px;
+    padding: 0px 60px;
  }
  .top .search {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px 20px;
  }
  .top .search input{
     width: 450px;
     height:40px;
     border-radius: 6px;
     border: 1px solid var(--Primary);
-    margin: 5px;
+    margin: 0 5px;
     padding: 5px 10px;
  }
  .top .search button{
@@ -104,15 +104,37 @@ const UlAdm = styled.ul`
   border-radius: 10px;
   color: var(--Primary);
 }
+.menu .itensMenu .unicIten2 {
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  border-radius: 10px;
+  color: var(--Primary);
+}
 .menu .itensMenu .unicIten img{
   width: 55px;
   margin-bottom: 10px;
+}
+.menu .itensMenu .unicIten2 img{
+  display: none;
 }
 .menu .itensMenu .unicIten a{
   color: var(--Primary);
   text-decoration: none;
 }
+.menu .itensMenu .unicIten2 a{
+  color: var(--Primary);
+  text-decoration: none;
+  font-weight: 600;
+}
 .menu .itensMenu .unicIten a:hover {
+  color: var(--PrimaryDisabled);
+}
+.menu .itensMenu .unicIten2 a:hover {
   color: var(--PrimaryDisabled);
 }
 
@@ -421,6 +443,22 @@ const RightNav2 = ({ open }) => {
   const Local = localStorage.getItem("lenseyewear");
   const user = JSON.parse(Local);
 
+
+  const[position, setPosition] = useState(false)
+  useEffect(function () {
+    function positionScroll(){
+      if(window.scrollY > 25 ){
+          setPosition(true)
+       } else {
+          setPosition(false)
+      }
+    }
+    
+    window.addEventListener('scroll', positionScroll);
+    },[])
+
+
+
     function handleContact() {
       window.open("https://wa.me/+5521984129435")
     }
@@ -500,19 +538,20 @@ const RightNav2 = ({ open }) => {
 
       <div className="menu">
         <div className="itensMenu">
-            <div className="unicIten">
+
+            <div className={position === true ? "unicIten2" : "unicIten"}>
               <img src={top01} alt="Logo Sua Chave" />
             <a href="/produtos/oculos-de-grau">ÓCULOS DE GRAU</a>
               </div> 
-            <div className="unicIten">
+            <div className={position === true ? "unicIten2" : "unicIten"}>
             <img src={top02} alt="Logo Sua Chave" />
            <a href="/produtos/oculos-de-sol">ÓCULOS DE SOL</a>
               </div> 
-            {/* <div className="unicIten">
+            {/* <div className={position === true ? "unicIten2" : "unicIten"}>
             <img src={top03} alt="Logo Sua Chave" />
               LENTES DE CONTATO
               </div>  */}
-            <div className="unicIten">
+            <div className={position === true ? "unicIten2" : "unicIten"}>
             <img src={top04} alt="Logo Sua Chave" />
              <a href="/acessorios">ACESSÓRIOS</a>
               </div> 
