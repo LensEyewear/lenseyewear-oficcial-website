@@ -11,6 +11,9 @@ import { PaymentRefused } from '../pages/PaymentRefused/PaymentRefused';
 import { SignUp } from '../pages/SignUp/SignUp';
 import { AccountCreateConfirmed } from '../pages/AccountCreateConfirmed/AccountCreateConfirmed';
 import { MyAccount } from '../pages/MyAccount/MyAccount';
+import { RecoverPassword } from '../pages/RecoverPassword/RecoverPassword';
+import { RecoverPasswordEmail } from '../pages/RecoverPasswordEmail/RecoverPasswordEmail';
+import { RecoverPasswordNew } from '../pages/RecoverPasswordNew/RecoverPassword';
 
 function Router () {
         const Local = localStorage.getItem("lenseyewear");
@@ -35,6 +38,9 @@ function Router () {
             <Route path="/checkout/pendente" element={<PaymentPending />}/>
             <Route path="/checkout/recusado" element={<PaymentRefused />}/>
             <Route path="/conta-criada" element={<AccountCreateConfirmed />}/>
+            <Route path="/recuperar-senha" element={<RecoverPassword />}/>
+            <Route path="/recuperar-senha/codigo" element={<RecoverPasswordEmail />}/>
+            <Route path="/recuperar-senha/nova-senha" element={<RecoverPasswordNew />}/>
             {/* <Route path="/minha-conta/:data" element={<MyAccount />}/> */}
             <Route path="/minha-conta/:data"
                     element={ <PrivateRoute> <MyAccount /></PrivateRoute>} />

@@ -7,6 +7,7 @@ import 'react-slideshow-image/dist/styles.css';
 import image01 from '../../assets/images/slider/01.png';
 import image02 from '../../assets/images/slider/02.png';
 import image03 from '../../assets/images/slider/03.png';
+import image04 from '../../assets/images/slider/04.png';
 
 function SliderHome() {
 
@@ -27,6 +28,10 @@ function SliderHome() {
         {
             id: "03",
             link: image03,
+       },
+        {
+            id: "04",
+            link: image04,
        }
     ]
 
@@ -39,7 +44,11 @@ const buttonStyle = {
   color: '#fff',
   border: '0px',
   margin: '10px',
-  fontSize: '20px'
+  fontSize: '20px',
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
 
 const properties = {

@@ -7,6 +7,7 @@ import { SliderHome } from "../../Components/SliderHome/SliderHome";
 import "./home.css";
 
 export function Home() {
+
     return (
         <div className="Home">
             <Navbar/>

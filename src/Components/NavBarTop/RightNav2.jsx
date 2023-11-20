@@ -7,7 +7,7 @@ import top02 from '../../assets/images/top-02.png'
 import top03 from '../../assets/images/top-03.png'
 import top04 from '../../assets/images/top-04.png'
 import { IoBagOutline,IoCartOutline, IoPersonOutline, IoHeartOutline, IoBagAddOutline,IoEyeOutline,
-        IoSearchOutline, IoLogoInstagram, IoLogoFacebook, IoLogoLinkedin, IoGlasses, IoGlassesOutline } from 'react-icons/io5';
+        IoSearchOutline, IoLogoInstagram, IoLogoFacebook, IoLogoLinkedin, IoGlasses, IoGlassesOutline, IoCloseCircle, IoCloseCircleOutline } from 'react-icons/io5';
         import LogoImg from '../../assets/images/logo-color.png'
 
 const UlAdm = styled.ul`
@@ -89,13 +89,14 @@ const UlAdm = styled.ul`
  .menu .itensMenu {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
+
 }
 .menu .itensMenu .unicIten{
   padding: 5px;
-  margin: 5px;
+  margin: 0px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,6 +104,48 @@ const UlAdm = styled.ul`
   width:200px;
   border-radius: 10px;
   color: var(--Primary);
+}
+.menu .itensMenu .unicIten .listIntensLinkAcive1{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten .listIntensLinkDesactive1 {
+  display: none;
+}
+.menu .itensMenu .unicIten .listIntensLinkAcive2{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten .listIntensLinkDesactive2 {
+  display: none;
+}
+.menu .itensMenu .unicIten .listIntensLinkAcive3{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten .listIntensLinkDesactive3 {
+  display: none;
 }
 .menu .itensMenu .unicIten2 {
   padding: 5px;
@@ -115,6 +158,53 @@ const UlAdm = styled.ul`
   border-radius: 10px;
   color: var(--Primary);
 }
+
+.menu .itensMenu .unicIten2 .listIntensLinkAcive1{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  border: 1px solid var(--Gray);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten2 .listIntensLinkDesactive1 {
+  display: none;
+}
+.menu .itensMenu .unicIten2 .listIntensLinkAcive2{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  border: 1px solid var(--Gray);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten2 .listIntensLinkDesactive2 {
+  display: none;
+}
+.menu .itensMenu .unicIten2 .listIntensLinkAcive3{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:200px;
+  color: var(--Primary);
+  background-color: var(--White);
+  border: 1px solid var(--Gray);
+  font-weight: 600;
+}
+.menu .itensMenu .unicIten2 .listIntensLinkDesactive3 {
+  display: none;
+}
+
 .menu .itensMenu .unicIten img{
   width: 55px;
   margin-bottom: 10px;
@@ -125,6 +215,7 @@ const UlAdm = styled.ul`
 .menu .itensMenu .unicIten a{
   color: var(--Primary);
   text-decoration: none;
+  margin-bottom: 10px;
 }
 .menu .itensMenu .unicIten2 a{
   color: var(--Primary);
@@ -443,6 +534,8 @@ const RightNav2 = ({ open }) => {
   const Local = localStorage.getItem("lenseyewear");
   const user = JSON.parse(Local);
 
+  const [suspenseMenu, setSuspenseMenu] = useState("")
+
 
   const[position, setPosition] = useState(false)
   useEffect(function () {
@@ -462,6 +555,13 @@ const RightNav2 = ({ open }) => {
     function handleContact() {
       window.open("https://wa.me/+5521984129435")
     }
+
+    function handleMouse(data) {
+      setSuspenseMenu(data)
+    }
+    function handleMouse2() {
+      setSuspenseMenu("")
+    }
     
   return (
     <UlAdm open={open}>
@@ -476,9 +576,9 @@ const RightNav2 = ({ open }) => {
         </div>
       <div className="buttonsMenu">
             <div className="iconsMenu">
-            <a className="unicIconMenu" href="https://instagram.com/powerstartenergy" target='_Blank'><IoLogoInstagram /></a>
-                <a className="unicIconMenu" href="https://facebook.com/powerstartenergy" target='_Blank'><IoLogoFacebook /></a>
-                <a className="unicIconMenu" href="https://linkedin.com/company/power-start-energy" target='_Blank'><IoLogoLinkedin /></a>
+            <a className="unicIconMenu" href="https://www.instagram.com/lens.eyewear/" target='_Blank'><IoLogoInstagram /></a>
+                {/* <a className="unicIconMenu" href="https://facebook.com/powerstartenergy" target='_Blank'><IoLogoFacebook /></a>
+                <a className="unicIconMenu" href="https://linkedin.com/company/power-start-energy" target='_Blank'><IoLogoLinkedin /></a> */}
             </div>
           </div>
       </div>
@@ -528,6 +628,11 @@ const RightNav2 = ({ open }) => {
     <ReactTooltip id='Carrinho' place="bottom" type="dark" effect="solid">
                <span>Carrinho</span>
           </ReactTooltip>
+
+    <a href="/checkout/carrinho"  data-tooltip-id="Sair" data-tooltip-content="Sair"> <IoCloseCircleOutline /> </a>
+    <ReactTooltip id='Sair' place="bottom" type="dark" effect="solid">
+               <span>Sair</span>
+          </ReactTooltip>
 </div>
     }
 
@@ -535,25 +640,47 @@ const RightNav2 = ({ open }) => {
 
       </div>
 
+      {/* onMouseOut={handleMouse2} */}
+      
 
-      <div className="menu">
-        <div className="itensMenu">
+      <div className="menu" onMouseOut={handleMouse2}>
+        <div className="itensMenu" >
 
-            <div className={position === true ? "unicIten2" : "unicIten"}>
+            <div className={position === true ? "unicIten2" : "unicIten"}onMouseOver={() => handleMouse("grau")}>
               <img src={top01} alt="Logo Sua Chave" />
-            <a href="/produtos/oculos-de-grau">ÓCULOS DE GRAU</a>
+            <a href="/produtos/oculos-de-grau" >ÓCULOS DE GRAU</a>
+
+            <div className={suspenseMenu === "grau" ? "listIntensLinkAcive1" : "listIntensLinkDesactive1"} onMouseOver={() => handleMouse("grau")}>
+            <a href="/produtos/oculos-de-grau">FEMININO</a>
+            <a href="/produtos/oculos-de-grau">MASCULINO</a>
+            <a href="/produtos/oculos-de-grau">KIDS</a>
+            </div>
               </div> 
-            <div className={position === true ? "unicIten2" : "unicIten"}>
+
+            <div className={position === true ? "unicIten2" : "unicIten"}onMouseOver={() => handleMouse("sol")}>
             <img src={top02} alt="Logo Sua Chave" />
-           <a href="/produtos/oculos-de-sol">ÓCULOS DE SOL</a>
+           <a href="/produtos/oculos-de-sol" >ÓCULOS DE SOL</a>
+
+           <div className={suspenseMenu === "sol" ? "listIntensLinkAcive2" : "listIntensLinkDesactive2"} onMouseOver={() => handleMouse("sol")}>
+            <a href="/produtos/oculos-de-grau">FEMININO</a>
+            <a href="/produtos/oculos-de-grau">MASCULINO</a>
+            <a href="/produtos/oculos-de-grau">KIDS</a>
+            </div>
+
               </div> 
-            {/* <div className={position === true ? "unicIten2" : "unicIten"}>
+            {/* <div className={position === true ? "unicIten2" : "unicIten"}onMouseOver={handleMouse}>
             <img src={top03} alt="Logo Sua Chave" />
               LENTES DE CONTATO
               </div>  */}
-            <div className={position === true ? "unicIten2" : "unicIten"}>
+            <div className={position === true ? "unicIten2" : "unicIten"} onMouseOver={() => handleMouse("acessorios")}>
             <img src={top04} alt="Logo Sua Chave" />
              <a href="/acessorios">ACESSÓRIOS</a>
+
+             <div className={suspenseMenu === "acessorios" ? "listIntensLinkAcive3" : "listIntensLinkDesactive3"} onMouseOver={() => handleMouse("acessorios")}>
+            <a href="/produtos/oculos-de-grau">CORDÕES</a>
+            <a href="/produtos/oculos-de-grau">FLANELAS</a>
+            <a href="/produtos/oculos-de-grau">LIMPA LENTES</a>
+            </div>
               </div> 
         </div>       
       </div>

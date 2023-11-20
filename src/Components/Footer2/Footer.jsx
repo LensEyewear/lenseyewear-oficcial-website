@@ -12,9 +12,9 @@ export function Footer() {
                 </a>
 
                 <div className="icons">
-                <a className="unicIconMenu" href="https://instagram.com/powerstartenergy" target='_Blank'><IoLogoInstagram /></a>
-                <a className="unicIconMenu" href="https://facebook.com/powerstartenergy" target='_Blank'><IoLogoFacebook /></a>
-                <a className="unicIconMenu" href="https://linkedin.com/company/power-start-energy" target='_Blank'><IoLogoLinkedin /></a>
+                <a className="unicIconMenu" href="https://www.instagram.com/lens.eyewear/" target='_Blank'><IoLogoInstagram /></a>
+                {/* <a className="unicIconMenu" href="https://facebook.com/powerstartenergy" target='_Blank'><IoLogoFacebook /></a>
+                <a className="unicIconMenu" href="https://linkedin.com/company/power-start-energy" target='_Blank'><IoLogoLinkedin /></a> */}
             </div>
             </div>
 
@@ -23,20 +23,20 @@ export function Footer() {
                 <div className="menu">
                     <h4>INSTITUCIONAL</h4>
                     <a href="#">Conheça a Lens Eweyear</a>
-                    <a href="#">Fale conosco</a>
+                    <a href="/minha-conta/atendimento">Fale conosco</a>
                 </div>
                 <div className="menu">
                     <h4>MINHA CONTA</h4>
-                    <a href="#">Meus dados</a>
-                    <a href="#">Fale pedidos</a>
-                    <a href="#">Favoritos</a>
+                    <a href="/minha-conta/meus-dados">Meus dados</a>
+                    <a href="/minha-conta/pedidos">meus pedidos</a>
+                    <a href="minha-conta/favoritos">Favoritos</a>
                 </div>
 
                 <div className="menu">
                     <h4>AJUDA</h4>
                     <a href="#">Política de pagamento</a>
                     <a href="#">Trocas e devoluções</a>
-                    <a href="#">Nossas lojas</a>
+                    {/* <a href="#">Nossas lojas</a> */}
                 </div>
 
             </div>
