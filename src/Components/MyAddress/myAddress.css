@@ -1,0 +1,93 @@
+ 
+.MyAddress {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1100px;
+    margin: 20px auto;
+}
+
+.MyAddress h3 {
+    font-weight: 700;
+    color: var(--Primary);
+}
+.MyAddress .MyAddressList {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+.MyAddress .MyAddressList .userAddress {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 45%;
+    margin: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+}
+
+.MyAddress .MyAddressList .userAddress h4 span {
+    font-weight: 700;
+}
+.MyAddress .MyAddressList .userAddress button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:70%;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px;
+}
+.MyAddress button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:300px;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 30px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.MyAddress button svg {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+
+@media (max-width: 1120px) {
+    .MyAddress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 30px 10px;
+    }
+    @media (max-width: 650px) {
+        .MyAddress .MyAddressList {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: column;
+            width: 100%;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .MyAddress .MyAddressList .userAddress {
+            width: 90%;
+        }
+}
+}

@@ -1,6 +1,6 @@
 import { Footer } from "../../Components/Footer2/Footer";
 import Navbar from "../../Components/NavBarTop/Navbar";
-import {IoCubeOutline, IoPersonOutline, IoHeartOutline, IoChatboxOutline, IoCloseOutline, IoCloseCircleOutline, IoCloseCircleSharp} from "react-icons/io5";
+import {IoCubeOutline, IoPersonOutline, IoHeartOutline, IoChatboxOutline, IoCloseOutline, IoCloseCircleOutline, IoCloseCircleSharp, IoMapOutline} from "react-icons/io5";
 import "./myAccount.css";
 import { Favorites } from "../../Components/Favorites/Favorites";
 import { useParams } from "react-router-dom";
@@ -10,6 +10,7 @@ import { CustomerSupport } from "../../Components/CustomerSupport/CustomerSuppor
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/Auth";
 import { MyDataEdit } from "../../Components/MyDataEdit/MyDataEdit";
+import { MyAddress } from "../../Components/MyAddress/MyAddress";
 
 export function MyAccount() {
     const {data} = useParams();
@@ -28,8 +29,9 @@ export function MyAccount() {
             <Navbar/>
 
             <div className="menuAccount">
-                <button onClick={() => handleRedirect("pedidos")}> <IoCubeOutline /> Meus Pedidos</button>
-                <button onClick={() => handleRedirect("meus-dados")}> <IoPersonOutline /> Meus Dados</button>
+                <button onClick={() => handleRedirect("pedidos")}> <IoCubeOutline /> Pedidos</button>
+                <button onClick={() => handleRedirect("meus-dados")}> <IoPersonOutline /> Dados</button>
+                <button onClick={() => handleRedirect("meus-enderecos")}> <IoMapOutline /> Endereços</button>
                 <button onClick={() => handleRedirect("favoritos")}> <IoHeartOutline /> Favoritos</button>
                 <button onClick={() => handleRedirect("atendimento")}> <IoChatboxOutline /> Atendimento</button>
                 <button className="btn2" onClick={handleLogOut}> <IoCloseCircleSharp/> Sair</button>
@@ -43,6 +45,8 @@ export function MyAccount() {
                 <Orders /> :
                 data === "meus-dados" ?
                 <MyData />:
+                data === "meus-enderecos" ?
+                <MyAddress />:
                 data === "editar-meus-dados" ?
                 <MyDataEdit />:
                 data === "atendimento" ?

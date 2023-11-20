@@ -160,7 +160,7 @@ const UlAdm = styled.ul`
 }
 
 .menu .itensMenu .unicIten2 .listIntensLinkAcive1{
-  padding: 5px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,14 +168,13 @@ const UlAdm = styled.ul`
   width:200px;
   color: var(--Primary);
   background-color: var(--White);
-  border: 1px solid var(--Gray);
   font-weight: 600;
 }
 .menu .itensMenu .unicIten2 .listIntensLinkDesactive1 {
   display: none;
 }
 .menu .itensMenu .unicIten2 .listIntensLinkAcive2{
-  padding: 5px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,14 +182,13 @@ const UlAdm = styled.ul`
   width:200px;
   color: var(--Primary);
   background-color: var(--White);
-  border: 1px solid var(--Gray);
   font-weight: 600;
 }
 .menu .itensMenu .unicIten2 .listIntensLinkDesactive2 {
   display: none;
 }
 .menu .itensMenu .unicIten2 .listIntensLinkAcive3{
-  padding: 5px;
+  padding: 10px 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,7 +196,6 @@ const UlAdm = styled.ul`
   width:200px;
   color: var(--Primary);
   background-color: var(--White);
-  border: 1px solid var(--Gray);
   font-weight: 600;
 }
 .menu .itensMenu .unicIten2 .listIntensLinkDesactive3 {

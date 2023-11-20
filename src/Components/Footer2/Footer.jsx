@@ -22,7 +22,7 @@ export function Footer() {
 
                 <div className="menu">
                     <h4>INSTITUCIONAL</h4>
-                    <a href="#">Conheça a Lens Eweyear</a>
+                    <a href="#">Conheça a Lens Eyewear</a>
                     <a href="/minha-conta/atendimento">Fale conosco</a>
                 </div>
                 <div className="menu">
@@ -48,7 +48,7 @@ export function Footer() {
                 </div>
 
             <div className="address">
-                <h5><span>Razão Social:</span> Lens Eweyear - CNPJ: 45.511.079/0001-53</h5>
+                <h5><span>Razão Social:</span> Lens Eyewear - CNPJ: 45.511.079/0001-53</h5>
                 <h5><span>Endereço:</span> Rua 28 de Março, N 118, Sacomã, SP | CEP: 04236-160</h5>
             </div>
             </div>
