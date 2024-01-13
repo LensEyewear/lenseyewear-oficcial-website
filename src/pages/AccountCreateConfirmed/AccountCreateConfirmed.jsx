@@ -34,7 +34,7 @@ export function AccountCreateConfirmed() {
 
 
   
-                            <a href="/" className="btnForm">Ir para minha conta</a>
+                            <a href="/minha-conta/meus-dados" className="btnForm">Ir para minha conta</a>
                             <a href="/" className="Link">Voltar para o site</a>
                         </div>
 
