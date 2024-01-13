@@ -5,14 +5,33 @@ import img3 from "../../assets/images/armações/Masculino/ARXm00005/ARXm00008x4
 import img4 from "../../assets/images/armações/Masculino/ARXm00007/ARXm00007.x9.jpg";
 
 import "./featuresHome.css";
+import { useEffect, useState } from "react";
+import api from "../../services/api";
 
 export function FeaturesHome() {
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+        async function getProducts() {
+            await api.get(`/products`).then((res) => {
+                console.log(res.data);
+                setProducts(res.data);
+            }).catch((err) => {
+                console.log(err);
+            })
+        }
+
+        getProducts()
+    },[])
     return (
         <div className="FeaturesHome">
-             <ProductUnic text="AETHER ARXM" sex="FEMININO" link={img1}/>
-            <ProductUnic text="SERAPHINE ARXF" sex="FEMININO" link={img2}/>
-            <ProductUnic text="ALDEBARAN ARXM" sex="MASCULINO" link={img3}/>
-            <ProductUnic text="ANTARES ARXM" sex="MASCULINO" link={img4}/>
+                              {
+                        products?.map((product) => {
+                            return (
+                                <ProductUnic id={product.id}/>
+                            )
+                        })
+                    }
         </div>
     )
 }

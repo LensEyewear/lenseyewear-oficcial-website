@@ -17,6 +17,15 @@
     flex-direction: row; 
     flex-wrap: wrap;
 }
+.MyAccount .boxAccount {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
 
 .MyAccount .menuAccount button {
     padding: 10px 20px;

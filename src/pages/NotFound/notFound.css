@@ -1,0 +1,229 @@
+.NotFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.NotFound .sections {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.NotFound .sections .sectionNotFound {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.NotFound .sections .sectionNotFound img {
+    height: 40px;
+    margin: 5px;
+}
+
+.NotFound .sections .sectionNotFound p {
+    font-weight: 700;
+    text-align: center;
+    color: var(--Paragraph);
+    margin: 5px;
+}
+ 
+
+.NotFound .sections .sectionNotFound .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+}
+.NotFound .sections .sectionNotFound .buttonsSelect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 10px 5px;
+}
+.NotFound .sections .sectionNotFound .buttonsSelect .btnSelect1 {
+    padding: 5px 20px;
+    border-radius: 0px;
+    width:100%;
+    color: var(--Primary);
+    background-color: var(--White);
+    border: none;
+    border-bottom: 2px solid var(--Primary);
+    margin: 0px;
+}
+.NotFound .sections .sectionNotFound .buttonsSelect .btnSelect2 {
+    padding: 5px 20px;
+    border-radius: 0px;
+    width:100%;
+    color: var(--Gray);
+    background-color: var(--White);
+    border: none;
+    border-bottom: 2px solid var(--Gray);
+    margin: 0px;
+}
+
+.NotFound .sections .sectionNotFound .form .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.NotFound .sections .sectionNotFound .form .image img {
+    height: 150px;
+}
+.NotFound .sections .sectionNotFound .form h3 {
+    font-weight: 700;
+    text-align: center;
+    color: var(--Primary);
+    margin: 10px;
+}
+.NotFound .sections .sectionNotFound .form p {
+    font-weight: 500;
+    text-align: center;
+    color: var(--Paragraph);
+    margin-bottom: 20px;
+}
+.NotFound .sections .sectionNotFound .form .linkNotFound {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    width:100%;
+    margin: 5px;
+}
+
+.NotFound .sections .sectionNotFound .form .linkNotFound a {
+    text-decoration: none;
+    color: var(--Gray);
+    font-size: 14px;
+}
+
+.NotFound .sections .sectionNotFound .form input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px;
+}
+.NotFound .sections .sectionNotFound .form .btnForm {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--White);
+    background-color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-direction: row;
+    text-decoration: none;
+}
+.NotFound .sections .sectionNotFound .form .Link {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--Paragraph);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.NotFound .sections .sectionNotFound .form .double {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+
+.NotFound .sections .sectionNotFound .form  .double input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 48%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 0;
+}
+
+.NotFound .sections .sectionNotFound .form .passwords {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:100%;
+}
+.NotFound .sections .sectionNotFound .form .passwords .pass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width:100%;
+}
+
+.NotFound .sections .sectionNotFound .form .passwords .pass input {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width:100%;
+    color: var(--Primary);
+    border: 1px solid var(--Primary);
+    margin: 5px 5px 5px 0;
+}
+
+.NotFound .sections .sectionNotFound .form .passwords .pass button {
+    padding: 10px;
+    border-radius: 6px;
+    width: 50px;
+    color: var(--Primary);
+    background-color: var(--White);
+    border: 1px solid var(--Primary);
+    margin: 5px 0 5px 5px;
+}
+
+.NotFound .sections .imageNotFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-image: url("../../assets/images/mulher-feliz2.jpg"); 
+    background-color: #000; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media(max-width: 825px) {
+    .NotFound .sections .imageNotFound  {
+        display: none;
+    }
+    .NotFound .sections .sectionNotFound  {
+        width: 100%;
+    }
+    @media(max-width: 520px) {
+        .NotFound .sections .sectionNotFound .form {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+}
+

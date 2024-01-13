@@ -47,6 +47,28 @@ function AuthProvider({children}) {
         }) 
 } 
 
+async function newAddressAccount({
+    idAccount, type, title, road, number, complement, 
+    district, city, uf, cep, reference
+}) {
+    const data = {
+        idAccount, type, title, road, number, complement, 
+    district, city, uf, cep, reference
+        }
+    console.log(data)
+    
+    await api.post('/addressAccounts', data).then(() => {
+   
+        toast.info(`Endereço cadastrado com sucesso!`);
+        window.open("/minha-conta/meus-enderecos", "_self")
+
+    }).catch(error => {
+        console.log("Cadastro não foi realizado: "+ error);
+        toast.error(`Userna
+        me ou E-mail ja utilizados. Tente outro por favor!`);
+    });
+}
+
 async function logout() {
     localStorage.removeItem("lenseyewear");
     window.location.reload(false);
@@ -57,6 +79,7 @@ async function logout() {
         <AuthContext.Provider value={{
             loginSession,
             createAccount,
+            newAddressAccount,
             logout
         }}>
             {children}

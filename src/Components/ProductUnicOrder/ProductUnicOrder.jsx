@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import "./productUnic.css";
+import "./productUnicOrder.css";
 import api from "../../services/api";
+import { IoCreateOutline, IoEyeOutline, IoTrashOutline } from "react-icons/io5";
 
-export function ProductUnic({id}) {
+export function ProductUnicOrder({id}) {
 
     const [product, setProduct] = useState([])
 
@@ -21,19 +22,25 @@ export function ProductUnic({id}) {
 
 
     return (
-        <div className="ProductUnic">
-            <div className="featured">
-                    <h6>DESTAQUE</h6>
-            </div>
+        <div className="ProductUnicOrder">
+
             <div className="image">
             <a href={`/oculos/${product.title}`}>
                 <img src={product.featuredImage} alt="" />
                 </a>
             </div>
+
+            <div className="dataInfos">
+
             <div className="textInfos">
-                <h4> <a href={`/oculos/${product.title}`}>{product.title}</a></h4>
-                <h6>{product.sex}</h6>
+                <h3> <a href={`/oculos/${product.title}`}>{product.title} - {product.sex}</a></h3>
             </div>
+
+            <div className="featured">
+                    <h6>DESTAQUE</h6>
+            </div>
+
+
             <div className="colors">
                 {product?.colors?.map((colors) => {
                     return (
@@ -46,6 +53,15 @@ export function ProductUnic({id}) {
                 <h5>-</h5>
                 <h5>10x R{product.promotionalPrice}</h5>
             </div>
+            </div>
+
+            <div className="buttonsProducts">
+                <button><IoCreateOutline/></button>
+                <button><IoTrashOutline/></button>
+                <button><IoEyeOutline /></button>
+            </div>
         </div>
     )
 }
+
+

@@ -55,7 +55,7 @@
     object-fit: cover;
     margin: 3px;
     border-radius: 6px;
-
+    border: 2px solid #eee;
 }
 .Product .InfosProduct .images .imageMain {
     display: flex;
@@ -64,12 +64,14 @@
     flex-direction: column;
     width: 400px;
     height: 400px;
+
 }
 .Product .InfosProduct .images .imageMain img {
     width: 380px;
     height: 380px;
     object-fit: cover;
     border-radius: 10px;
+    border: 2px solid #eee;
 }
 .Product .InfosProduct .dataProduct {
     display: flex;

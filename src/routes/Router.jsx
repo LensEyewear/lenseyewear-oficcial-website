@@ -14,6 +14,7 @@ import { MyAccount } from '../pages/MyAccount/MyAccount';
 import { RecoverPassword } from '../pages/RecoverPassword/RecoverPassword';
 import { RecoverPasswordEmail } from '../pages/RecoverPasswordEmail/RecoverPasswordEmail';
 import { RecoverPasswordNew } from '../pages/RecoverPasswordNew/RecoverPassword';
+import { NotFound } from '../pages/NotFound/NotFound';
 
 function Router () {
         const Local = localStorage.getItem("lenseyewear");
@@ -25,12 +26,13 @@ function Router () {
 
     return (
             <Routes>
+            <Route path="*" element={<NotFound />}/>
             <Route path="/" element={<Home />}/>
             <Route path="/entrar" element={<SignIn />}/>
             <Route path="/cadastrar" element={<SignUp />}/>
-            <Route path="/oculos/:nome" element={<Product />}/>
-            <Route path="/produtos/:tipo/:sexo" element={<Products />}/>
-            <Route path="/produtos/:tipo" element={<Products />}/>
+            <Route path="/oculos/:title" element={<Product />}/>
+            <Route path="/produtos/:type/:sex" element={<Products />}/>
+            <Route path="/produtos/:type" element={<Products />}/>
             <Route path="/acessorios" element={<Products />}/>
             <Route path="/checkout/carrinho" element={<Cart />}/>
             <Route path="/checkout/pagamento" element={<PaymentCart />}/>

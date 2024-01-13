@@ -10,24 +10,26 @@
 
 .ProductUnic .featured {
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     background-color: var(--Primary);
     color: var(--White);
     position: absolute;
-    margin-top: -255px;
+    margin-top: -270px;
     margin-left: -130px;
 }
 .ProductUnic .image {
-    width: 220px;
-    height: 160px;
+    width: 223px;
+    height: 163px;
     border-radius: 6px;
     object: cover;
+    border: 2px solid #ddd;
 }
 .ProductUnic .image img {
     width: 220px;
     height: 160px;
     border-radius: 6px;
     object: cover;
+
 }
 .ProductUnic .textInfos {
     display: flex;
@@ -38,7 +40,11 @@
 }
 .ProductUnic .textInfos h4 {
     font-weight: 500;
-    margin: 5px;
+    margin: 3px 5px;
+}
+.ProductUnic .textInfos h4 a {
+    text-decoration: none;
+    color: var(--Primary);
 }
 .ProductUnic .colors {
     display: flex;
@@ -61,6 +67,10 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
+}
+.ProductUnic .price h4 {
+    margin: 3px;
+    color: var(--Primary);
 }
 .ProductUnic .price h5 {
     margin: 3px;

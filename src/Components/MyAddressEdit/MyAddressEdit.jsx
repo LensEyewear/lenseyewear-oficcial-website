@@ -1,13 +1,13 @@
 import { useContext, useEffect, useState } from "react";
-import "./myAddress.css"
+import "./myAddressEdit.css"
 import { IoAddCircleOutline, IoBusinessOutline, IoHomeOutline } from "react-icons/io5";
 import Modal from 'react-modal';
 import { mask as masker, unMask } from "remask";
 import { AuthContext } from "../../contexts/Auth";
 import api from "../../services/api";
-import { MyAddressEdit } from "../MyAddressEdit/MyAddressEdit";
 
-export function MyAddress() {
+export function MyAddressEdit({id}) {
+    console.log(id);
     const Local = localStorage.getItem("lenseyewear");
     const user = JSON.parse(Local);
 
@@ -25,13 +25,21 @@ export function MyAddress() {
     const [uf, setUf] = useState("");
     const [reference, setReference] = useState("");
     const [cep, setCep] = useState("");
-    const [addressAccount, setAddressAccount] = useState([]);
 
     useEffect(() => {
         async function loadAddressAccount() {
-            await api.get(`addressAccounts/user/${user.id}`).then((res) => {
-                console.log(res.data)
-                setAddressAccount(res.data)
+            await api.get(`addressAccounts/unic/${id}`).then((res) => {
+                console.log(res.data[0]);
+                setTitle(res.data[0].title)
+                setType(res.data[0].type)
+                setRoad(res.data[0].road)
+                setNumber(res.data[0].number)
+                setComplement(res.data[0].complement)
+                setDistrict(res.data[0].district)
+                setCity(res.data[0].city)
+                setUf(res.data[0].uf)
+                setReference(res.data[0].reference)
+                setCep(res.data[0].cep)
             }).catch((err) => {
                 console.log(err)
             })
@@ -40,9 +48,6 @@ export function MyAddress() {
         loadAddressAccount()
     },[])
 
-    function handleRedirect(data) {
-        window.open( `/minha-conta/${data}`, "_self")
-    }
 
     function handleOpenModalProcess(e) {
         e.preventDefault();
@@ -88,31 +93,8 @@ export function MyAddress() {
         Modal.setAppElement('#root');
 
     return (
-        <div className="MyAddress">
-            <h3>MEUS ENDEREÇOS</h3>
-            
-            <div className="MyAddressList">
-
-                {addressAccount.map((address) => {
-                    return (
-                        <div className="userAddress" key={address.id}>
-                        <h4><span>Endereço:</span> {address.type} - {address.title}</h4>
-                        <h4><span>Rua:</span> {address.road} - Nº {address.number}</h4>
-                        <h4><span>Complemento: </span> {address.complement}</h4>
-                        <h4><span>Bairro:</span> {address.district}</h4>
-                        <h4><span>Cidade:</span> {address.city} - <span>Estado:</span> {address.uf}</h4>
-                        <h4><span>CEP:</span> {address.cep}</h4>
-                        <h4><span>Referência:</span> {address.reference}</h4>
-                        <br />
-                       <MyAddressEdit id={address.id} />
-                    </div>
-                    )
-                })}
-              
-               
-
-            </div>
-                    <button onClick={handleOpenModalProcess}><IoAddCircleOutline />Novo Endereço</button>
+        <div className="MyAddressEdit">
+                                <button onClick={handleOpenModalProcess}><IoAddCircleOutline />Editar Endereço</button>
 
 
 

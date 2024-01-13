@@ -1,0 +1,101 @@
+.ProductUnicOrder {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    background-color: #f5f5f5;
+}
+
+.ProductUnicOrder .featured {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: var(--Primary);
+    color: var(--White);
+}
+
+
+.ProductUnicOrder .image {
+    width: 220px;
+    height: 160px;
+    border-radius: 6px;
+    object: cover;
+}
+.ProductUnicOrder .image img {
+    width: 220px;
+    height: 160px;
+    border-radius: 6px;
+    object: cover;
+}
+
+.ProductUnicOrder .dataInfos {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+
+.ProductUnicOrder .textInfos {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+.ProductUnicOrder .textInfos h3 {
+    font-weight: 600;
+    margin: 5px;
+}
+.ProductUnicOrder .textInfos h3 a {
+    text-decoration: none;
+    color: var(--Primary);
+}
+.ProductUnicOrder .colors {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: 5px;
+}
+.ProductUnicOrder .colors .colorUnic {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--Gray);
+}
+.ProductUnicOrder .price {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+}
+.ProductUnicOrder .price h5 {
+    margin: 3px;
+}
+.ProductUnicOrder .buttonsProducts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   padding: 10px;
+}
+
+.ProductUnicOrder .buttonsProducts button{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--Primary);
+    border: none;
+    background: #e5e5e5;
+    margin: 3px;
+    border-radius: 10px;
+}

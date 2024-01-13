@@ -1,10 +1,11 @@
 .FeaturesHome{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: row;
     width: 1100px;
     margin: 20px auto;
+    flex-wrap: wrap;
 }
 
 @media(max-width: 1150px) {

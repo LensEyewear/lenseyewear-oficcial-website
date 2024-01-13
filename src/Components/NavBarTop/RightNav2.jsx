@@ -645,23 +645,25 @@ const RightNav2 = ({ open }) => {
 
             <div className={position === true ? "unicIten2" : "unicIten"}onMouseOver={() => handleMouse("grau")}>
               <img src={top01} alt="Logo Sua Chave" />
-            <a href="/produtos/oculos-de-grau" >ÓCULOS DE GRAU</a>
+            <a href="#" >ÓCULOS DE GRAU</a>
 
             <div className={suspenseMenu === "grau" ? "listIntensLinkAcive1" : "listIntensLinkDesactive1"} onMouseOver={() => handleMouse("grau")}>
-            <a href="/produtos/oculos-de-grau">FEMININO</a>
-            <a href="/produtos/oculos-de-grau">MASCULINO</a>
-            <a href="/produtos/oculos-de-grau">KIDS</a>
+            <a href="/produtos/Óculos de Sol/Feminino">FEMININO</a>
+            <a href="/produtos/Óculos de Sol/Masculino">MASCULINO</a>
+            <a href="/produtos/Óculos de Sol/Kids">KIDS</a>
+            <a href="/produtos/Óculos de Sol">TODOS</a>
             </div>
               </div> 
 
             <div className={position === true ? "unicIten2" : "unicIten"}onMouseOver={() => handleMouse("sol")}>
             <img src={top02} alt="Logo Sua Chave" />
-           <a href="/produtos/oculos-de-sol" >ÓCULOS DE SOL</a>
+           <a href="#" >ÓCULOS DE SOL</a>
 
            <div className={suspenseMenu === "sol" ? "listIntensLinkAcive2" : "listIntensLinkDesactive2"} onMouseOver={() => handleMouse("sol")}>
-            <a href="/produtos/oculos-de-grau">FEMININO</a>
-            <a href="/produtos/oculos-de-grau">MASCULINO</a>
-            <a href="/produtos/oculos-de-grau">KIDS</a>
+           <a href="/produtos/Óculos de Gráu/Feminino">FEMININO</a>
+            <a href="/produtos/Óculos de Gráu/Masculino">MASCULINO</a>
+            <a href="/produtos/Óculos de Gráu/Kids">KIDS</a>
+            <a href="/produtos/Óculos de Gráu">TODOS</a>
             </div>
 
               </div> 
@@ -674,9 +676,9 @@ const RightNav2 = ({ open }) => {
              <a href="/acessorios">ACESSÓRIOS</a>
 
              <div className={suspenseMenu === "acessorios" ? "listIntensLinkAcive3" : "listIntensLinkDesactive3"} onMouseOver={() => handleMouse("acessorios")}>
-            <a href="/produtos/oculos-de-grau">CORDÕES</a>
-            <a href="/produtos/oculos-de-grau">FLANELAS</a>
-            <a href="/produtos/oculos-de-grau">LIMPA LENTES</a>
+            <a href="#">CORDÕES</a>
+            <a href="#">FLANELAS</a>
+            <a href="#">LIMPA LENTES</a>
             </div>
               </div> 
         </div>       
